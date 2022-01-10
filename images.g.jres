@@ -1,0 +1,17 @@
+{
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAP//AAAAAP/wvcsPAAD//////w8A8P/+7u8EAAD/7/JP/v//AP8u/xskQv/wLy7v/y1C//AiLu/ULVIP8CIu79T9Xw/wLy7v/5/5/wD/Lv/7M5P/AP/v8v85M/8A8O/+/jOTDwAA////n/kAAAAA/wDwDwAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "knight with hots"
+    },
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAP/w8AAPD///69+wAA/+/v7u9EAPD/Lv/kTk0A8O/yv9H+////4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "knight"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}

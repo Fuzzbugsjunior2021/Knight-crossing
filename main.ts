@@ -4,11 +4,58 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Knight.x -= 16
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (player2, hotss) {
+    if (holdinghotss == null) {
+        hotss.setImage(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `)
+        holdinghotss = hotss
+        Knight.setImage(assets.image`knight with hots`)
+    }
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Knight.x += 16
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     Knight.y += 16
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
+	if (holdinghotss!: null)
+    tiles.placeOnTile(holdinghotss,location)
+    holdinghotss.setImage(img`
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+    `)
+    holdinghotss = null
 })
 function spawnh_o_t_s (numhots: number, startColumn: number, startrow: number, gap: number) {
     for (let index = 0; index < numhots; index++) {
@@ -30,41 +77,25 @@ function spawnh_o_t_s (numhots: number, startColumn: number, startrow: number, g
             . . . b b f f f f f f b b . . . 
             . . . . . b b b b b b . . . . . 
             `, SpriteKind.Food)
+        hotss.z = -1
         tiles.placeOnTile(hotss, tiles.getTileLocation(startColumn, startrow))
         startColumn += 1 + gap
     }
-    
-  
-
 }
 let Right_CAR: Sprite = null
 let leftplane: Sprite = null
 let startColumn = 0
 let hotss: Sprite = null
+let holdinghotss: Sprite = null
 let Knight: Sprite = null
-scene.setBackgroundColor(7)
+let notholding = assets.image`knight`
+scene.setBackgroundColor(10)
 tiles.setTilemap(tilemap`level1`)
-Knight = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . f f f f . . . . . . 
-    . . . . f f f 2 2 f f f . . . . 
-    . . . f f f 2 2 2 2 f f f . . . 
-    . . f f f e e e e e e f f f . . 
-    . . f f e 2 2 2 2 2 2 e e f . . 
-    . f f e 2 f f f f f f 2 e f f . 
-    . f f f f f e e e e f f f f f . 
-    . . f e f b f 4 4 f b f e f . . 
-    . f f e 4 1 f d d f 1 4 e f . . 
-    f d f f e 4 d d d d 4 e f e . . 
-    f b f e f 2 2 2 2 e d d 4 e . . 
-    f b f 4 f 2 2 2 2 e d d e . . . 
-    f c f . f 4 4 5 5 f e e . . . . 
-    . f f . f f f f f f f . . . . . 
-    . . . . f f f . . . . . . . . . 
-    `, SpriteKind.Player)
+Knight = sprites.create(notholding, SpriteKind.Player)
 tiles.placeOnTile(Knight, tiles.getTileLocation(8, 29))
 scene.cameraFollowSprite(Knight)
 Knight.setFlag(SpriteFlag.StayInScreen, true)
+spawnh_o_t_s(5, 2, 1, 1)
 game.onUpdateInterval(500, function () {
     leftplane = sprites.create(img`
         ...fffffff.........ccc..
@@ -113,4 +144,3 @@ game.onUpdateInterval(500, function () {
     Right_CAR.vx = 50
     Right_CAR.setFlag(SpriteFlag.DestroyOnWall, true)
 })
-spawnh_o_t_s(5,2,1,1)
