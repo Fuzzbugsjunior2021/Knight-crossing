@@ -1,13 +1,18 @@
 {
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAP8AAAAAAAD///9E1AAA8P/+7uTeAAD/7/JP/v//AP8u/xskQv/wLy7v/y1C//AiLu/ULVIP8CIu79QtUg/wLy7v/y1C/wD/Lv8bJEL/AP/v8k/+//8A8O/+7uTeAAAA////RNQAAAAA/wAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "knight"
+    },
     "image1": {
-        "data": "hwQQABAAAAAAAAAAAP//AAAAAP/wvcsPAAD//////w8A8P/+7u8EAAD/7/JP/v//AP8u/xskQv/wLy7v/y1C//AiLu/ULVIP8CIu79T9Xw/wLy7v/5/5/wD/Lv/7M5P/AP/v8v85M/8A8O/+/jOTDwAA////n/kAAAAA/wDwDwAAAAAAAAAAAA==",
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAP8AAAAAAAD///9E1AAA8P/+7uTeAAD/7/JP/v//AP8u/xskQv/wLy7v/y1C//AiLu/ULVIP8CIu79T9Xw/wLy7v/5/5/wD/Lv/7M5P/AP/v8v85M/8A8O/+/jOTDwAA////n/kAAAAA/wDwDwAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "knight with hots"
     },
-    "image2": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAPAP/w8AAPD///69+wAA/+/v7u9EAPD/Lv/kTk0A8O/yv9H+////4vL+3yRC/y/i8k7dJFIPL+LyTt0kUg//4vL+3yRC//Dv8r/RLkL/8P8u/+T+/wAA/+7v7k9NAADw///+4EQAAAAA8A8AAAAAAAAAAAAAAA==",
+    "image3": {
+        "data": "hwQQABAAAACwuwu7u7u7C+vuu8zM6867S+S7mcnr7rtLRLszmevuC0tEuzOT6+4LS0S7MzPr7gtLRLs7M+vuC0tEzbwz6+4LS0TNvDPr7gtLRLs7M+vuC0tEuzOT6+4LS0S7M5nr7gtLRLuZmevuC0vku5nJ6+67S+67zMzrzruwuwu7u7u7Cw==",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "knight"
+        "displayName": "Chest with HOTTS"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
